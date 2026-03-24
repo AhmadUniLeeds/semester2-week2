@@ -16,6 +16,27 @@ def main():
 
     db = get_connection()
 
+
+    #LEVEL 1:
+
+    l1_t1 = db.execute("SELECT category FROM products;")
+    
+    for row in l1_t1:
+        print(dict(row))
+
+    print()
+
+    l1_t2 = db.execute("SELECT COUNT(*) FROM customers;")
+    
+    for row in l1_t2:
+        print(dict(row))
+    
+    l1_t3 = db.execute("SELECT COUNT(*) FROM customers;")
+    
+    for row in l1_t3:
+        print(dict(row))
+
+
     db.close()
 
 
